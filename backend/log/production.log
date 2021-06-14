@@ -1,0 +1,34 @@
+D, [2021-06-05T18:48:31.839571 #36932] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+D, [2021-06-05T18:48:31.855601 #36932] DEBUG -- :   [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2021-06-05T18:48:31.862912 #36932] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+D, [2021-06-05T18:48:31.869933 #36932] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+D, [2021-06-05T18:48:31.870833 #36932] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Update (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "production"], ["updated_at", "2021-06-05 23:48:31.868954"], ["key", "environment"]]
+D, [2021-06-05T18:48:31.873335 #36932] DEBUG -- :   [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+D, [2021-06-05T18:48:31.873904 #36932] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+D, [2021-06-05T18:49:49.357460 #37028] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+D, [2021-06-05T18:49:49.371838 #37028] DEBUG -- :   [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2021-06-05T18:49:49.379877 #37028] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+D, [2021-06-05T18:49:49.386487 #37028] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+D, [2021-06-05T18:52:20.234306 #37120] DEBUG -- :   [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2021-06-05T18:52:20.266704 #37120] DEBUG -- :   [1m[36mLike Load (2.9ms)[0m  [1m[34mSELECT "likes".* FROM "likes"[0m
+D, [2021-06-05T18:52:20.283915 #37120] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2021-06-05T18:52:20.284698 #37120] DEBUG -- :   [1m[36mLike Destroy (0.5ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = $1[0m  [["id", 96]]
+D, [2021-06-05T18:52:20.285685 #37120] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2021-06-05T18:52:20.291036 #37120] DEBUG -- :   [1m[36mDislike Load (1.0ms)[0m  [1m[34mSELECT "dislikes".* FROM "dislikes"[0m
+D, [2021-06-05T18:52:20.303883 #37120] DEBUG -- :   [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+D, [2021-06-05T18:52:20.323742 #37120] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2021-06-05T18:52:20.324988 #37120] DEBUG -- :   [1m[36mMovie Destroy (0.9ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 75]]
+D, [2021-06-05T18:52:20.325827 #37120] DEBUG -- :   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+D, [2021-06-05T18:52:20.330494 #37120] DEBUG -- :   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+D, [2021-06-05T18:52:20.338879 #37120] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2021-06-05T18:52:20.339847 #37120] DEBUG -- :   [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1216]]
+D, [2021-06-05T18:52:20.340692 #37120] DEBUG -- :   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+D, [2021-06-05T18:52:20.342466 #37120] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2021-06-05T18:52:20.343581 #37120] DEBUG -- :   [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "up_count", "down_count", "query", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Up"], ["up_count", 54], ["down_count", 11], ["query", "tt1049413"], ["created_at", "2021-06-05 23:52:20.341597"], ["updated_at", "2021-06-05 23:52:20.341597"]]
+D, [2021-06-05T18:52:20.344664 #37120] DEBUG -- :   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+D, [2021-06-05T18:52:20.346024 #37120] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2021-06-05T18:52:20.346852 #37120] DEBUG -- :   [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("uuid", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["uuid", "123"], ["created_at", "2021-06-05 23:52:20.345343"], ["updated_at", "2021-06-05 23:52:20.345343"]]
+D, [2021-06-05T18:52:20.347932 #37120] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2021-06-05T18:52:20.357147 #37120] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2021-06-05T18:52:20.358628 #37120] DEBUG -- :   [1m[36mLike Create (1.0ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "movie_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1217], ["movie_id", 76], ["created_at", "2021-06-05 23:52:20.356162"], ["updated_at", "2021-06-05 23:52:20.356162"]]
+D, [2021-06-05T18:52:20.359752 #37120] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
